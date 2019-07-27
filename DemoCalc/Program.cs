@@ -10,38 +10,63 @@ namespace DemoCalc
     {
         static void Main(string[] args)
         {
-            /*
-             1. Ingresar el primer número
-             2. Pedir operacion
-             3. Ingresar segundo número
-             4. Calcular
-             5. Mostrar resultado
-             */
-            //1.
+            //if (true)
+            //Console.WriteLine();
+            //Console.WriteLine();
+
+            //if (true)
+            //{ 
+            //    Console.WriteLine();
+            //    Console.WriteLine();
+            //}
+            //Console.WriteLine();
+
+            //1. Ingresar el primer número
             string primerNumero;
-            Console.WriteLine("Ingrese el primer número");
+            Console.Write("Ingrese el primer número: ");
             primerNumero = Console.ReadLine();
 
-            //2.
+            //2. Pedir operacion
             string operacion;
-            Console.WriteLine("Ingrese S (suma) o R (resta)");
+            Console.Write("Ingrese S (suma) o R (resta): ");
             operacion = Console.ReadLine();
 
-            //3.
+            //3. Ingresar segundo número
             string segundoNumero;
-            Console.WriteLine("Ingrese el srgundo número");
+            Console.Write("Ingrese el segundo número: ");
             segundoNumero = Console.ReadLine();
 
-            //4.
+            //4. Calcular
             int primNumero = Convert.ToInt32(primerNumero);
             int segNumero = Convert.ToInt32(segundoNumero);
-            int resultado = primNumero + segNumero;
 
-            //5.
-            Console.WriteLine(resultado);
+            int resultado;
 
+            if (operacion == "S")
+            {
+                resultado = primNumero + segNumero;
+            }
+            else if(operacion == "R")
+            {
+                resultado = primNumero - segNumero;
+            }
+            else 
+            {
+                resultado = 0;
+            }
+            //5. Mostrar resultado
+            int contador = 5;
+            while (contador > 0)
+            {
+                Console.Write("\rEl resultado estará disponible en " + contador);
+                System.Threading.Thread.Sleep(1000);
+                contador--;
+            }
+            Console.WriteLine("\rEl resultado es " + resultado);
 
             //FIN
+            Console.WriteLine();
+            Console.WriteLine("Presione una tecla para terminar...");
             Console.ReadKey();
         }
     }
