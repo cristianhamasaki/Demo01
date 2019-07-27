@@ -6,6 +6,19 @@ namespace DemoClass
     {
         static void Main(string[] args)
         {
+            //1. se creo clase promedio
+            //2. se creo metodo para calcular promedio
+            //3. al metodo se le hace llegar por parametro un array de notas. 
+            //   Esto se hizo para que no haya limite de la cantidad de notas que pueden llegar
+            //   por alumnos.
+            //4. se creo clase alumno
+            //5. se le asignaron atributos PUBLICOS para el nombre y un array de ints Notas
+            //6. se instancio objeto Promedio -> esto es para utilizar el método de calculo de promedio del alumno 
+            //7. Se inicio un array de Alumnos de 4 posiciones
+            //8. Se crean instancias para cada alumno y se le dan Nombre y las Notas
+            //   Prestar atención a como se asigno valores a los arrays y como se iniciaron
+            //   Es importante porque si estan en NULL arrojará error la aplicación.
+
             Promedio promediador = new Promedio();
 
             Alumno[] alumnos = new Alumno[4];
